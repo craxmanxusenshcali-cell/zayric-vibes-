@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Zayric Vibes — Erayo jacayl oo Somali ah oo qalbiga taabanaya.">
+
+  <title>Zayric Vibes ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #08080d;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      width: 100%;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #ff6b91;
+    }
+
+    .telegram {
+      padding: 10px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
+
+    .telegram:hover {
+      background: #ff6b91;
+      color: #111;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(255,107,145,0.20),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 20% 60%,
+          rgba(150,90,255,0.15),
+          transparent 30%
+        );
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .small-title {
+      color: #ff6b91;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #ff6b91;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: auto;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .main-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 25px;
+      background: #ff6b91;
+      color: #160a10;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .main-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255,107,145,0.3);
+    }
+
+    /* QUOTES */
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 7%;
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+    }
+
+    .section-title p {
+      color: #ff6b91;
+      letter-spacing: 3px;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(35px, 5vw, 60px);
+      line-height: 1.1;
+    }
+
+    .quotes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .quote-card {
+      min-height: 280px;
+      padding: 30px;
+
+      border-radius: 25px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.07),
+          rgba(255,255,255,0.02)
+        );
+
+      border: 1px solid rgba(255,255,255,0.10);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.3s;
+    }
+
+    .quote-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,107,145,0.5);
+    }
+
+    .quote-number {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .quote-text {
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .featured {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,107,145,0.20),
+          rgba(150,90,255,0.10)
+        );
+    }
+
+    .share-button {
+      align-self: flex-start;
+      margin-top: 20px;
+
+      padding: 9px 16px;
+
+      border-radius: 30px;
+
+      background: transparent;
+      color: white;
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .share-button:hover {
+      background: white;
+      color: #111;
+    }
+
+    /* CTA */
+
+    .cta {
+      margin: 30px 7% 100px;
+      padding: 80px 30px;
+
+      text-align: center;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff6b91,
+          #a979ff
+        );
+
+      color: #150a10;
+    }
+
+    .cta-small {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .cta h2 {
+      font-size: clamp(35px, 5vw, 60px);
+      margin: 15px 0;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 25px;
+
+      padding: 14px 25px;
+
+      background: white;
+      color: #171017;
+
+      border-radius: 30px;
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+
+      color: #777;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* TOAST */
+
+    .toast {
+      position: fixed;
+
+      left: 50%;
+      bottom: 25px;
+
+      transform: translate(-50%, 100px);
+
+      background: white;
+      color: #111;
+
+      padding: 12px 20px;
+
+      border-radius: 30px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+
+      z-index: 100;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .telegram {
+        padding: 8px 13px;
+        font-size: 13px;
+      }
+
+      .hero-content {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 70px 5%;
+      }
+
+      .quotes {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-text {
+        font-size: 20px;
+      }
+
+      .cta {
+        margin: 20px 5% 70px;
+        padding: 60px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <nav>
+
+      <div class="logo">
+        Zayric <span>Vibes</span> ❤️
+      </div>
+
+      <!-- CHANGE THIS TELEGRAM LINK -->
+      <a
+        class="telegram"
+        href="https://t.me/"
+        target="_blank"
+      >
+        Telegram ↗
+      </a>
+
+    </nav>
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        ❤️ Erayo qalbiga taabanaya
+      </div>
+
+      <h1>
+        Jacaylku waa eray,
+        <br>
+        <span>dareenku waa nolol.</span>
+      </h1>
+
+      <p class="hero-text">
+        Ku raaxayso erayo jacayl oo Somali ah,
+        la wadaag qofka qalbigaaga ku jira,
+        oo nagu soo biir Telegram.
+      </p>
+
+      <a
+        href="#quotes"
+        class="main-button"
+      >
+        Akhriso Erayada ↓
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- QUOTES -->
+
+  <main>
+
+    <section
+      class="section"
+      id="quotes"
+    >
+
+      <div class="section-title">
+
+        <p>
+          Qoraallo ❤️
+        </p>
+
+        <h2>
+          Erayo qalbiga ka yimid
+        </h2>
+
+      </div>
+
+
+      <div class="quotes">
+
+
+        <!-- QUOTE 1 -->
+
+        <article class="quote-card">
+
+          <span class="quote-number">
+            01
+          </span>
+
+          <p class="quote-text">
+            “Mararka qaar hal qof ayaa qalbigaaga
+            ka buuxin kara meel aysan boqol qof
+            buuxin karin.”
+          </p>
+
+          <button
+            class="share-button"
+            onclick="shareQuote(this)"
+            data-quote="Mararka qaar hal qof ayaa qalbigaaga ka buuxin kara meel aysan boqol qof buuxin karin."
+          >
+            La wadaag ↗
+          </button>
+
+        </article>
+
+
+        <!-- QUOTE 2 -->
+
+        <article class="quote-card featured">
+
+          <span class="quote-number">
+            02
+          </span>
+
+          <p class="quote-text">
+            “Haddii qalbigaygu hadli lahaa,
+            magacaaga ayuu ugu horreyn
+            ku dhawaaqi lahaa.” 🫀🥺❤️
+          </p>
+
+          <button
+            class="share-button"
+            onclick="shareQuote(this)"
+            data-quote="Haddii qalbigaygu hadli lahaa, magacaaga ayuu ugu horreyn ku dhawaaqi lahaa."
+          >
+            La wadaag ↗
+          </button>
+
+        </article>
+
+
+        <!-- QUOTE 3 -->
+
+        <article class="quote-card">
+
+          <span class="quote-number">
+            03
+          </span>
+
+          <p class="quote-text">
+            “Qofka saxda ah ma aha qofka ku qumman,
+            waa qofka qalbigaaga fahma.”
+          </p>
+
+          <button
+            class="share-button"
+            onclick="shareQuote(this)"
+            data-quote="Qofka saxda ah ma aha qofka ku qumman, waa qofka qalbigaaga fahma."
+          >
+            La wadaag ↗
+          </button>
+
+        </article>
+
+
+        <!-- QUOTE 4 -->
+
+        <article class="quote-card">
+
+          <span class="quote-number">
+            04
+          </span>
+
+          <p class="quote-text">
+            “Haddii aad qof jeceshahay,
+            mararka qaar joogitaankiisa ayaa
+            ka qiimo badan kun eray.”
+          </p>
+
+          <button
+            class="share-button"
+            onclick="shareQuote(this)"
+            data-quote="Haddii aad qof jeceshahay, mararka qaar joogitaankiisa ayaa ka qiimo badan kun eray."
+          >
+            La wadaag ↗
+          </button>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- TELEGRAM CTA -->
+
+    <section class="cta">
+
+      <div class="cta-small">
+        📲 Nala soco
+      </div>
+
+      <h2>
+        Erayo badan ayaa kuu sugaya.
+      </h2>
+
+      <p>
+        Ku biir Telegram-ka si aad u hesho
+        qoraallo cusub iyo erayo jacayl oo gaar ah.
+      </p>
+
+      <!-- CHANGE THIS TELEGRAM LINK -->
+      <a
+        class="cta-button"
+        href="https://t.me/"
+        target="_blank"
+      >
+        Ku biir Telegram ❤️
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Zayric Vibes.
+      Made with ❤️
+    </p>
+
+  </footer>
+
+
+  <!-- TOAST -->
+
+  <div
+    id="toast"
+    class="toast"
+  >
+    Qoraalka waa la koobiyey ❤️
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    async function shareQuote(button) {
+
+      const quote = button.getAttribute("data-quote");
+
+      try {
+
+        if (navigator.share) {
+
+          await navigator.share({
+            title: "Zayric Vibes ❤️",
+            text: quote
+          });
+
+        } else {
+
+          await navigator.clipboard.writeText(quote);
+
+          showToast();
+
+        }
+
+      } catch (error) {
+
+        console.log("Share cancelled.");
+
+      }
+
+    }
+
+
+    function showToast() {
+
+      const toast = document.getElementById("toast");
+
+      toast.classList.add("show");
+
+      setTimeout(function() {
+
+        toast.classList.remove("show");
+
+      }, 2200);
+
+    }
+
+  </script>
+
+</body>
+</html> 
